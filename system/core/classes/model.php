@@ -33,13 +33,16 @@ class Model {
     protected static $has_and_belongs_to_many = array();
     
     public static function find($regex, $attr=null) {
-        
+        $this::init();
     }
     
     public static function init() {
         if ( Model::$_init ) return;
         
         Model::$_init = true;
+        
+        
+        
     }
 }
 ?>

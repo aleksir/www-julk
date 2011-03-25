@@ -2,7 +2,8 @@
 /* 
  *  Copyright (c) 2011 Aleksi Rautakoski.
  */
-    Sees::require_controller("app");
+Sees::require_controller("app");
+Sees::require_helper("form");
 Sees::import("app/model/uutiset.php");
 Sees::import("components/aeditabletext.php");
 

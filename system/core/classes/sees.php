@@ -130,6 +130,10 @@ class Sees {
         require_once(SYS_PATH.'core/classes/'.$file);
     }
 
+    public static function require_helper($name) {
+        require_once(APP_PATH."helper/".$name.".php");
+    }
+    
     public static function require_controller($name) {
         require_once(APP_PATH."controller/".$name."controller.php");
     }
