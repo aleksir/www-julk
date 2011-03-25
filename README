@@ -1,11 +1,16 @@
-This is project is made for course http://appro.mit.jyu.fi/www/
+Copyright (c) 2011 Aleksi Rautakoski.
 
 Everything under system-directory and index.php is licensed under MIT License
 [see below].
 
+This is project is made for course http://appro.mit.jyu.fi/www/
+
 So you can use this framework, but you are not allowed to use site that I built with
 this framework. I made this just for my own use.
 
+
+License
+====================
 Copyright (c) 2011 Aleksi Rautakoski.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

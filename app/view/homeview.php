@@ -12,7 +12,7 @@
     <body>
         <div id="page">
             <h1 class="hidden"><?= $A['title'] ?></h1>
-            <?php include('header.php') ?>
+            <?php include('shared/header.php') ?>
             <div id="content" class="clear">
                 <div class="wrapper shadow">
                     <div id="navbar">
@@ -81,6 +81,6 @@
                 </div>
             </div>
         </div>
-        <?php include('footer.php') ?>
+        <?php include('shared/footer.php') ?>
     </body>
 </html>
