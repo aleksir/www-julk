@@ -22,7 +22,7 @@ abstract class Controller {
     }
   
     protected function check_view () {
-        return ( is_file( APP_PATH . 'view/'. $this->view .'view.php') );
+        return ( is_file( APP_PATH . 'view/'. $this->view .'.php') );
     }
 
     protected function say( $s, $target=NULL ) {
@@ -46,7 +46,7 @@ abstract class Controller {
         echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         if ( $this->check_view() ) {
             $A = $this->context; /* voidaan käyttää $A -muuttujaa */
-            include(APP_PATH . 'view/'. $this->view .'view.php');
+            include(APP_PATH . 'view/'. $this->view .'.php');
         }
         else {
             echo $this->context['yield'];
