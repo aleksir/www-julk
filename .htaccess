@@ -1,0 +1,41 @@
+Options +FollowSymLinks
+Options -Indexes
+Options -Multiviews
+
+#ErrorDocument 500,404,403 error.php
+
+<FilesMatch "index[0-9]?\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+<FilesMatch "\.(inc)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+DirectoryIndex index.php index.html index.htm
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  
+  # .-tiedostot pois näkyvistä
+  RewriteRule "(^|/)\." - [F]
+
+  RewriteBase /www-julk
+
+  #kaikki pyynnot publiciin paitsi jos on index.php
+
+  RewriteRule ^$ public/ [L]
+  #RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} !^index.php.*$
+  RewriteCond $1 !^(index\.php)
+  RewriteRule ^(.*)$ public/$1 [L]
+
+
+  #RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} !-d
+  #RewriteRule ^(.*)$ index.php?site=$1 [L,QSA]
+  #RewriteRule ^ index.php [L]
+
+</IfModule>
