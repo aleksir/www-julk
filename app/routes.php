@@ -25,16 +25,16 @@ Route::set('root')
     ->controller('home')
     ->action('index');
 
-Route::set('pages',':page')
+/*Route::set('pages',':page')
     ->controller('page')
     ->action('show');
-    
+*/    
 /**
  * Default route
  */
-Route::set('1',':controller/:action/:id');
-Route::set('2',':controller/:action/:id.:format');
-Route::set('3',':action/:id.:format')->controller('home');
+Route::set('1',':controller/:action/:id')->action('index');
+Route::set('2',':controller/:action/:id.:format')->action('index');
+//Route::set('3',':action/:id.:format')->controller('home');
 
 $routes = array(
                 'home' => array('home'),
