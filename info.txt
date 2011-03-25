@@ -1,0 +1,6 @@
+Juuren htaccess ohjaa kyselyt public-hakemistoon, josta jos ei ole sopivaa tiedostoa saatavilla niin ohjataan index.php:hen.
+
+Vaikutteita:
+-yii
+-prado
+-kohana

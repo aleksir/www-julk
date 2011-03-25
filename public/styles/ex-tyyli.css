@@ -1,0 +1,215 @@
+/* 
+    Document   : tyyli
+    Created on : 22.1.2011, 23:40:49
+    Author     : Aleksi Rautakoski
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@font-face {
+  font-family: 'Gruppo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gruppo'), url('Gruppo-Light.ttf') format('truetype');
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.hidden { display: none; }
+
+body {
+    /*background-color: #FF8810;*/
+    background: #FF8A00 url(images/ylabanneri-02.png) repeat-x top;
+    padding: 0; margin: 0;
+    font-family: 'Gruppo', 'verdana','serif';
+}
+
+p {
+    line-height: 1.3em;
+}
+
+a {
+    color: white;
+    line-height: 1.3em;
+    padding: 0.15em;
+    background-color: #0f0f0f;
+    /*background: #ffffff url(images/linkki_bg.png) repeat-x; */
+    /*background-position: 0px 0px;*/
+    text-decoration: none;
+    text-transform:uppercase;
+}
+
+a:hover {
+    /*background-position: 0px 50px;*/
+    background-color: #22AF00;
+    /*color: #0f0f0f;*/
+}
+/* HEADER  */
+#header {
+    overflow: hidden;
+    clear: both;
+    max-width: 60em;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    /*border-left: 5em #FF8A00 solid;*/
+    background: #FF8A00 url(images/ylabanneri-01.png) no-repeat center;
+}
+#header>a {
+    background: none;
+}
+#header h1 {
+    font-size: 2.3em;
+    position: absolute;
+    display: block;
+    margin-left: 1em;
+    top: 55px;
+}
+#header img {
+    margin: 10px;
+    display: none;
+}
+
+#banneri {
+    height: 200px; /* Kuvan takia kiinteä */
+    width: 58em; /* Ei mitään mieltä eikä hyötyä jos pienenee näytön mukana */
+    min-width: 600px; /* Asetetaan kuitenkin pikselirajat bannerin kuvalle */
+    max-width: 1000px; /* jos fonttikoko sattuu olemaan iso tai pieni */
+    background: #FF8A00 url(/www-julk/images/banneri-layer2-01.png) no-repeat center;
+    border-left: 1em #0f0f0f solid;
+    border-right: 1em #0f0f0f solid;
+    text-align: center;
+    line-height: 200px;
+    overflow: hidden;
+}
+
+#footer {
+    clear: both;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 58em;
+    padding: 1em;
+    /*background-color: #3B3B30;*/
+    background: #FF8A00 url(images/footer_02.png) repeat-x;
+    color: #3B3B30;
+    /*border-left: 5em #FF8A00 solid;*/
+    /*border-top: 2px #FF9C25 solid;*/
+    overflow: hidden;
+}
+#footer a {
+    background: none;
+    color: #3B3B30;
+    text-transform: none;
+}
+#footer address {
+    font-style: normal;
+}
+/******* WRAPPER *********/
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+#content {
+    display: table;
+    width: 100%;
+    max-width: 60em;
+    overflow: hidden;
+}
+/******** YLA ************/
+#yla {
+    min-height: 200px; /* Jos näyttö menee pieneks niin navigaatiopalkki venyy alas */
+    overflow: hidden;
+    max-width: 60em;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+
+/********** PALSTAT ********/
+#palstat {
+    display: table;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    padding: 0px;
+    width: 100%;
+    max-width: 60em;
+}
+
+#palsta1, #palsta2, #palsta3 {
+    display: block;
+    float: left;
+    padding: 1em;
+    max-width: 18em;
+}
+#palsta1 {
+    clear: left;
+}
+#palsta2 {
+}
+#palsta3 {
+    clear: right;
+}
+
+/******** NAVBAR **********/
+#navbar {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    max-width: 60em;
+}
+#navbar ul {
+    list-style: none;
+    position: relative;
+    padding: 1em;
+}
+#navbar li {
+    display:inline;
+}
+#navbar li a {
+    padding: 0.2em 1em;
+    font-size: 1.1em;    
+}
+
+/********* MUUT ***********/
+
+.right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+
+.musta {
+    background-color: #0f0f0f;
+    color: #FFFFFF;
+}
+.musta a {
+    color: #0f0f0f;
+    text-decoration: underline;
+    line-height: 1.3em;
+    padding: 0.15em;
+    background-color: #ffffff;
+    /*background: #ffffff url(images/linkki_bg.png) repeat-x;
+    background-position: 0px 50px;*/
+    text-decoration: none;
+    text-transform:uppercase;
+}
+
+.musta a:hover {
+    background-color:#22AF00;
+    /*background-position: 0px 0px;
+    color: #ffffff;*/
+}
+
+.valkoinen {
+    background-color: #FFFFFF;
+    color: #0f0f0f;
+}

@@ -1,0 +1,390 @@
+/*
+ *   Copyright (c) 2011 Aleksi Rautakoski.
+*/
+@charset "UTF-8";
+@font-face {
+    font-family: 'Gruppo';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gruppo'), url('Gruppo-Light.ttf') format('truetype');
+}
+
+html, body { height: 100%;} /* Kikka saada footer alas */
+#page { min-height: 100% !important; width: 100%;}
+/*.wrapper { float: left; }*/
+
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.4em;
+    font-family: Gruppo, verdana,serif;
+    background: #ff8600 url(images/content_bg.png) top repeat-x;
+}
+
+img { border: none; }
+
+h1 {
+    font-size: 2em;
+    margin: 0.5em 0px !important;
+}
+h2 {
+    text-transform: uppercase;
+}
+p {
+    line-height: 1.4em;
+}
+.linkki {
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2em;
+    border-radius: 3px;
+}
+.linkki:hover {
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 0.2em;
+}
+
+#header {
+    margin: 0;
+    padding: 0;
+    background: #000000 url(images/header_bg.png) bottom repeat-x;
+    width: 100%;
+    color: #fffff;
+    position: relative;
+    display: block;
+    float: left;
+    z-index: 10;
+}
+#header .wrapper {
+    margin: 0px auto;
+    width: 80%;
+    max-width: 1200px;
+    height: 2em;
+    min-width: 500px;
+    min-height: 50px;
+    line-height: 50px; /* Ei vaikuta kuitenkaan tekstin suurenemiseen */
+    position: relative;
+}
+#header p { padding: 0px; margin: 0px; }
+#header .name {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration:none;
+    font-size: 2em;
+    margin-left: 0.5em;
+    float: left;
+}
+#header .search {
+    margin: 1em 1em 0.5em 0;
+    line-height: 1em;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 0.1em 0.2em 0.1em 0.4em;
+    position: absolute;
+    right: 0;
+}
+#header .search * { padding: 0; margin: 0; vertical-align: middle; float: left; }
+.suurennuslasi {
+    display: block;
+    float: left;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: transparent url(images/suurennuslasi.png) no-repeat center;
+}
+#header .search input {
+    margin: 0px;
+    width: 15em;
+    min-height: 20px;
+    padding: 0px;
+    display: inline;
+    background: none;
+    border: none;
+}
+#content {
+    margin: 0 auto 0.5em auto;
+    padding: 0;
+    display: block;
+    position: relative;
+    /*float: left;*/
+    width: 80%;
+    min-width: 500px;
+}
+#content * {
+    margin: 0px;
+}
+#content .wrapper {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1200px;
+    clear: both;
+    display: block;
+    position: relative;
+    float: left;
+    background-color: white;
+    border-radius: 0 0 10px 10px; /* ulkonäkökysymys */
+}
+
+ul.menu {
+}
+ul.menu ul {
+    list-style:none;
+}
+
+#navbar {
+    background: #ff8600 url(images/navbar_bg.png) bottom repeat-x;
+    clear: both !important;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+#navbar ul {
+    margin: 0 1em;
+    padding: 0;
+    list-style:none;
+    z-index: 10;
+    float: left;
+    position: relative;
+}
+#navbar>ul>li {
+    float: left;
+    padding-top: 0.5em;
+}
+
+#navbar>ul>li img {
+    position: relative;
+    padding: 0 0.5em;
+    height: 0.9em;
+    width: 0.9em;
+}
+#navbar ul li a {
+    vertical-align: bottom;
+    /*line-height: 2em;*/
+    padding: 0.3em 0.5em;
+    background: none;
+    color: #000000;
+    text-decoration:none;
+    text-transform:uppercase;
+    display: block;
+}
+#navbar ul li a:hover {
+    color: #ffffff;
+}
+
+#navbar .current {
+    background: #ffffff;
+    border-left: 2px solid #da6200;
+    border-right: 2px solid #da6200;
+}
+#navbar .current a:hover {
+    color: #000000;
+}
+
+.login_form {
+    background: #ffffff;
+    padding: 0.5em;
+    display: block;
+    border: 2px solid #000000;
+}
+.login_form p {
+    display: block;
+}
+.login_form fieldset {
+    border: none;
+}
+.login_form fieldset legend {
+    font-size: 1.5em;
+    border-bottom: 1px solid black;
+}
+.login_form label {
+    position: relative;
+    display: block;
+    float: left;
+    clear: left;
+}
+.login_form input {
+    display: block;
+    float: right;
+    clear: right;
+    margin-bottom: 0.5em !important;
+    position: relative;
+}
+#navbar .login_form {
+    position: absolute;
+    width: 16em;
+    height: 6.5em;
+    bottom: -7.5em;
+    right: 1em;
+    z-index: 10;
+    border-radius: 3px;
+}
+
+#left-content {
+    width: 69%;
+    margin-right: auto;
+    min-width: 200px;
+    /*display: inline-block;*/
+    float: left;
+    position: relative;
+    vertical-align: top;
+    padding-top: 2em;
+}
+#main-box {
+    padding: 1em;
+}
+#boxes {
+    border-top: 2px solid #ffA030;
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+#boxes .box {
+    display: block;
+    float: left;
+    width: 48%;
+    min-width: 200px;
+    border-right: 2px solid #ffA030;
+    vertical-align: top;
+}
+#boxes .box:last-child {
+    border: none;
+}
+#boxes .box>* {
+    margin: 0.5em;
+}
+#boxes .box h2 {
+    text-align: center;
+}
+
+
+#feeds {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    max-width: 30%;
+    min-width: 200px;
+    display: block;
+    float: left;
+    position: relative;
+    background-color: #ffef99;
+    border-radius: 3px;
+}
+#feeds .linkki:hover {
+    background-color: #ff8600;
+}
+#feeds h2 {
+    padding: 0.5em;
+    border-bottom: solid #ffA030 1px;
+}
+#feeds .feed {
+    display: block;
+    clear: both;
+    padding: 0.5em;
+}
+#feeds .feed:after {
+    content: url(images/pisteet.png);
+    margin: 50%;
+}
+#footer {
+    margin: 0 auto;
+    width: 80%;
+    min-width: 500px;
+    position: relative;
+    color: #555555;
+    padding: 0 0 0em 0;
+}
+#footer .wrapper {
+    margin: 1em 0 0 0;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    float: left;
+    /*background: #a7a7a7 url(images/footer_bg.png) top repeat-x;*/
+    background: transparent;
+    border:1px solid #ffA030;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+#footer #other {
+    position: relative;
+    width: 100%;
+    float: left;
+    min-width: 10em;
+}
+#footer #other>* { margin: 1em;}
+#footer #author {
+    position: relative;
+    width: 100%;
+    float: left;
+    border-top: 1px solid #999999;
+    border-top: 1px solid #ffA030;
+}
+#footer #author>*{ margin: 1em;}
+.clear {
+    clear: both !important;
+}
+.right {
+    float: right !important;
+}
+.left {
+    float: left !important;
+}
+.grey {
+    color: #a7a7a7 !important;
+}
+.shadow {
+    box-shadow: 0px 0px 3px 2px #da6200;
+    -webkit-box-shadow: 0px 0px 3px 2px #da6200;
+    -moz-box-shadow: 0px 0px 3px 2px #da6200;
+}
+.hidden {
+    display: none !important;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+
+.button {
+    font-family: Gruppo, Verdana, Geneva, sans-serif;
+    text-transform: uppercase;
+    background: url(images/header_bg.png) bottom repeat-x;
+    color: #ffffff;
+    font-size: 1em;
+    border: 1px solid #a7a7a7;
+    padding: 0.2em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.button:hover {
+    color: #FF8600;
+}
+.right-corner {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+.filelist {
+    list-style-image:url(images/kansio.png);
+    background-color: #ffffff;
+}
+.close {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background-image: url(images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/****** *****/
+.edit-text textarea {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}

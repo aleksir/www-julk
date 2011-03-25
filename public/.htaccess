@@ -1,0 +1,15 @@
+  RewriteEngine on
+  
+  # .-tiedostot pois näkyvistä
+  RewriteRule "(^|/)\." - [F]
+
+  RewriteBase /www-julk
+
+  #kaikki pyynnot publiciin
+  #FIXME www-julk/public/styles/?site=styles
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(.*)$ /www-julk/index.php?site=$1 [L,QSA]
+  #RewriteRule ^ index.php [L]
+
