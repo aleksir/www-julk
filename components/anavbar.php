@@ -34,12 +34,12 @@ class ANavbar extends Component {
         if ( strtolower($args) == "etusivu" ) $args = '';
 
         $navlinks = array(
-                '' => '<img src="'.Sees::file("images/talo.png").'" alt="Etusivu" />',
-                'palvelut' => Sees::string('Palvelut'),
-                'uutiset' => Sees::string('Uutiset'),
-                'referenssit' => Sees::string('Referenssit'),
-                'yhteydenotot' => Sees::string('Ota yhteyttä'),
-                'asikkaille' => Sees::string('Asiakkaille'),
+                '' => '<img src="'.URL::file("images/talo.png").'" alt="Etusivu" />',
+                'palvelut' => I18n::t('Palvelut'),
+                'uutiset' => I18n::t('Uutiset'),
+                'referenssit' => I18n::t('Referenssit'),
+                'yhteydenotot' => I18n::t('Ota yhteyttä'),
+                'asikkaille' => I18n::t('Asiakkaille'),
         );
 
         echo "<ul>\n";
@@ -47,7 +47,7 @@ class ANavbar extends Component {
         foreach ($navlinks as $controller => $text) {
             $class = ($controller == strtolower($args)) ? ' class="current" ' : '';
             ?>
-                <li<?= $class ?>><a href="<?= Sees::url_to($controller); ?>"><?= $text ?></a></li>
+                <li<?= $class ?>><a href="<?= URL::url_to($controller); ?>"><?= $text ?></a></li>
             <?php
         }
 

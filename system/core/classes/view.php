@@ -20,8 +20,12 @@
             $this->file = $file_name;
         }
      }
-     public function render() {
-        //TODO: render
+     
+     public static function render($view) {
+         ob_start();
+         
+         $s = ob_get_contents();
+         ob_end_clean();
      }
  }
 

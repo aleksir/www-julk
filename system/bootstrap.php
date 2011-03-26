@@ -19,8 +19,8 @@ date_default_timezone_set( ($settings['timezone'] ? $settings['timezone'] : 'UTC
 /**
  * Locale from settings.php
  */
-setlocale(LC_ALL, ($settings['locale'] ? $settings['locale'] : 'en-US.utf-8'));
-
+I18n::init($settings['locale'] ? $settings['locale'] : 'en-US.utf-8');
+ 
 Session::init();
 
 /**

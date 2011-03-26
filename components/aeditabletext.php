@@ -114,7 +114,7 @@ class AEditableText implements IComponent {
     <form method="POST" action="">
         <input type="hidden" name="sivu" value="<?= $this->sivu ?>" />
         <input type="hidden" name="kohta" value="<?= $this->kohta ?>" />
-        <input type="submit" name="event_edit" value="<?=Sees::string("Muokkaa");?>" class="button" />
+        <input type="submit" name="event_edit" value="<?=I18n::t("Muokkaa");?>" class="button" />
     </form>
 </div>
 
@@ -129,8 +129,8 @@ class AEditableText implements IComponent {
     <textarea rows="20" name="teksti">
                 <?= htmlspecialchars($this->text) ?>
     </textarea>
-    <input type="submit" name="event_save" value="<?=Sees::string("Tallenna");?>" class="button" />
-    <input type="submit" name="event_cancel" value="<?=Sees::string("Peruuta");?>" class="button" />
+    <input type="submit" name="event_save" value="<?=I18n::t("Tallenna");?>" class="button" />
+    <input type="submit" name="event_cancel" value="<?=I18n::t("Peruuta");?>" class="button" />
 </form>
         <?php
     }

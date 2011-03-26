@@ -8,7 +8,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="description" content="Kuvaus" />
         <meta name="author" content="Aleksi Rautakoski" />
-        <?= Sees::stylesheet('tyyli') ?>
+        <?= URL::stylesheet('tyyli') ?>
         <title>Hups</title>
     </head>
     <body>
@@ -17,7 +17,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
             <div class="wrapper">
                 <a href="#" class="name">
                     <span class="grey">Team</span><span>&nbsp;Kukkopilli</span>
-                    <img src="<?= Sees::file("images/lintu.png") ?>" alt="logo" />
+                    <img src="<?= URL::file("images/lintu.png") ?>" alt="logo" />
                 </a>
                 <form method="post" action="haku.php" class="search">
                     <p>
@@ -32,7 +32,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
             <div class="wrapper">
                 <div id="main-box">
                     <h1>Hups, etsimääsi sivua ei löytynyt.</h1>
-                    <p>Voit mennä etusivulle <a href="<?= Sees::url_to('') ?>" class="linkki">tästä</a>.</p>
+                    <p>Voit mennä etusivulle <a href="<?= URL::url_to('') ?>" class="linkki">tästä</a>.</p>
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 	<div id="header" class="clear">
     	<div class="wrapper">
-            <a href="<?= Sees::url_to(''); ?>" class="name">
+            <a href="<?= URL::url_to(''); ?>" class="name">
             	<span class="grey">Team</span><span>&nbsp;Kukkopilli</span>
-                <img src="<?= Sees::file("images/lintu.png") ?>" alt="logo" />
+                <img src="<?= URL::file("images/lintu.png") ?>" alt="logo" />
             </a>
             <form method="post" action="haku.php" class="search">
             <p>

@@ -1,5 +1,10 @@
 <?php
-
+/*
+ * This local script is made for detect all I18n strings and outputs locale file.
+ * Use from command line:
+ *     $ php i18n.localization.php 
+ *
+ */
 ROOT_PATH = substr(__DIR__, 0, -13);
 $lang = array();
 
@@ -24,7 +29,7 @@ function scan(ROOT_PATH, &$lang) {
         if (is_file(ROOT_PATH . $f) && preg_match('/.*\.php|inc|html|htm|xhtml$/', $f) ) {
             $file = file(ROOT_PATH . $f);
             foreach ($file as $line) {
-                preg_match_all('/Sees::[Ss]tring\([\'\"]([^\'^\".]*)[\'\"]\)/', $line, $out);
+                preg_match_all('/I18n::[Tt]\([\'\"]([^\'^\".]*)[\'\"],?.*\)/', $line, $out);
                 if (count($out[1]) > 0) {
                     foreach($out[1] as $m) {
                         $lang[$m] = $m;

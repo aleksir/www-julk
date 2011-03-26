@@ -20,6 +20,11 @@ $lang = array (
     'Kirjaudu sisään' => 'Kirjaudu sisään',
     'Käyttäjätunnus' => 'Käyttäjätunnus',
     'Salasana' => 'Salasana',
+    'messages' => array (
+               'errors' => array (
+                         'test' => 'Tämä on testi!',
+                         ),
+               ),
 );
 
 ?>

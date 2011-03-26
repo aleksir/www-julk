@@ -36,7 +36,7 @@ class ANewsFeed implements IComponent {
         foreach ( $args as $uutinen ) {
             ?>
 <div class="feed">
-    <h3><a href="<?= Sees::url_to('uutiset','uutinen', $uutinen->id ); ?>" class="linkki"><?= $uutinen->otsikko ?></a></h3>
+    <h3><a href="<?= URL::url_to('uutiset','uutinen', $uutinen->id ); ?>" class="linkki"><?= $uutinen->otsikko ?></a></h3>
     <p class="smaller"><?= date("j.n.Y - G:i",$uutinen->aika) ?></p>
     <p>
                     <?php

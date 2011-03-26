@@ -36,12 +36,23 @@
  *     ->line_break();
  *     ->submit("Login","login");
  *
+ * Also:
+ * Form::create("dsa")
+ *     ->fieldset("legend")
+ *         ->label("Username","username")
+ *         ->text_field("username")
+ *     ->end()
+ *     ->submit("Login","login");
+ *
+ *
  * @author Aleksi Rautakoski
  */
 class Form {
     private $children = array();
     private $action;
     private $html;
+    
+    private $open = array();
     
     public function __construct($action,$html=array()) {
         $this->action = $action;
@@ -56,6 +67,21 @@ class Form {
     
     public static function _line_break($args) {
         return '<br />';
+    }
+    
+    
+    /**
+     * @param [0] Legend name
+     */
+    public static function _fieldset($args) {
+        return "<fieldset><legend>$args[0]</legend>";
+    }
+    
+    /**
+     * @param [0] Tag name
+     */
+    public static function _end($args) {
+        return "</$args[0]>\n";
     }
     
     /**
@@ -104,17 +130,30 @@ class Form {
      * @return String This form in one string
      */
     public function __toString() {
+        
+        while ( count($this->open) > 0 ) {            
+            $this->end();
+        }
+        
         $str = '<form method="POST" action="' . $this->action . '" '. $this->html .'>';
         foreach ($this->children as $line) {
             $str .= $line;
         }
+        
         $str .= '</form>';
         return $str;
     }
     
     public function __call($name,$args) {
         $name = '_'.$name;
-        if ( method_exists($this,$name) ) {
+        if ( method_exists($this,$name) ) {          
+            if ( $name == "_fieldset" ) {
+                array_push($this->open,"fieldset");
+            }
+            else if ( $name == "_end" ) {
+                $args[0] = array_pop($this->open);
+            }
+            
             array_push( $this->children, $this->$name($args) );
             return $this;
         }
@@ -126,5 +165,4 @@ class Form {
         }
     }
 }
-
 ?>
