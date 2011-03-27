@@ -36,12 +36,12 @@ class HttpException extends Exception {
     }
 }
 /**
- * ComponentException
+ * ModuleException
  *
  * @author Aleksi Rautakoski
  * @package system.exceptions
  */
-class ComponentException extends Exception {
+class ModuleException extends Exception {
 }
 
 class SeesException extends Exception {

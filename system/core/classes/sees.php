@@ -24,8 +24,9 @@
 */
 
 defined( 'APP_PATH' ) or die( "[".__FILE__."] APP_PATH not defined");
-defined( 'COMP_PATH' ) or die("[".__FILE__."] COMP_PATH not defined");
+defined( 'MOD_PATH' ) or die("[".__FILE__."] MOD_PATH not defined");
 defined( 'BASE_URL' ) or die("[".__FILE__."] BASE_URL not defined");
+defined( 'TMP_PATH' ) or die("[".__FILE__."] TMP_PATH not defined");
 
 /**
  * Description of Sees
@@ -95,16 +96,16 @@ class Sees {
     public static function component($name, $args = NULL ) {
 
         if ( is_object($name) ) {
-            $component = $name;
+            $module = $name;
         } elseif (is_string($name)) {
-            require_once(COMP_PATH. strtolower($name) .".php");
-            $component = new $name();
+            require_once(MOD_PATH. strtolower($name) .".php");
+            $module = new $name();
 
 
         } else {
             throw new ComponentException("Illegal parametres for component.");
         }
-        $component->render($args);
+        $module->render($args);
     }
     
     

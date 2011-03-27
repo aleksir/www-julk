@@ -24,13 +24,19 @@
  */
 
 /**
+ * Description of ModuleInstaller
  *
  * @author Aleksi Rautakoski
  */
-interface IModule {
-    public function render( $args = NULL );
-    //public static function get_installer();
+abstract class ModuleInstaller {
+
+    /**
+     * Install method for ModuleInstaller. Must override when extended.
+     */
+    abstract public function install();
+    /**
+     * 
+     */
+    abstract public function remove();
 }
-
-
 ?>

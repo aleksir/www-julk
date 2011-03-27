@@ -5,6 +5,9 @@
  *     $ php i18n.localization.php 
  *
  */
+    
+//TODO: fix for I18n
+    
 ROOT_PATH = substr(__DIR__, 0, -13);
 $lang = array();
 
